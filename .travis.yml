@@ -1,3 +1,10 @@
+language: python
+install: make bootstrap
+script: make
+branches:
+  except:
+    - /^v[0-9]/
+after_success: coveralls
 deploy:
   provider: heroku
   api_key: oXWOM9N3Csen7pU/SDlurJCcwK1xUpwh2ysTUP4MvmFavxBdNbhE0wDbStF2WT3Emrc6s82J7BpeFL4WSZDscLWFDtl2UxkfZ5XSRbQIYjOj2kBE+Q8jtZARJpVsbc74iIAkW6nsLtmhBYZo0s5n54Oj5Lv4lFCu07sEKyVuFcI=
